@@ -188,6 +188,23 @@ nav {
     opacity: .6;
     transform: scale(1.1);
 }
+
+.rafting{
+    float: left;
+    width: 500px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px #7f82b5;
+
+}
+.conclude{
+    float: right;
+    width: 600px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px #7f82b5;
+}
+
+
+
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
