@@ -17,7 +17,6 @@
 
   }
   
-  /* Header styles */
   header {
     background-color: #0D1B2A	;
     color: #fff;
@@ -27,30 +26,67 @@
     padding: 1rem;
   }
   
-  header h1 {
-    text-decoration: "Rock Salt";
-    text-align: center;
-    font-size: 2rem;
-  }
-  
-  header nav a {
-    color: #fff;
-    text-decoration: "Rock Salt";
-    padding: 35px;
-    margin-left: 1rem;
-  }
-  
-  header nav a:hover {
-    text-decoration: underline;
-    color: #6C0E23;
-    background-color: #415A77;
-  }
-  
   .logo {
     display: block;
     width: 150px;
     height: 150px;
     transition: transform .5s;
+  }
+  
+  header h1 {
+    text-decoration: "Rock Salt";
+    text-align: center;
+    font-size: 2rem;
+    display: inline-block;
+  }
+  
+  .topnav {
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  .topnav a {
+    display: inline-block;
+    text-decoration: "Rock Salts";
+    padding: 35px;
+    margin-left: 1rem;
+    color: #415A77;
+  }
+  .topnav a:hover {
+    text-decoration: underline;
+    color: #6C0E23;
+    background-color: #415A77;
+  }
+  .topnav a.active {
+    font-weight: bold;
+  }
+  
+  .login-container {
+    display: inline-block;
+    margin: 2rem;
+    align-items: end;
+  }
+  
+  .login-container input[type="text"], .login-container input[type="password"] {
+    padding: 6px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+  }
+  
+  .login-container button[type="submit"] {
+    padding: 6px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6C0E23;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .login-container button[type="submit"]:hover {
+    background-color: #6C0E23;
   }
   
   /* Hero section styles */
@@ -229,22 +265,155 @@
     padding: 1rem;
   }
   footer p a:hover{
-    background-color: #415A77;
     text-decoration: underline;
+    color: #6C0E23;
+    background-color: #415A77;
 
   }
   
+  /* Style the banner section */
+  .banner {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  .banner h1 {
+    text-decoration: "Rock Salt";
+    grid-row: 1/2;
+    grid-column: 4/6;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .banner img{
+    grid-column: 6/10;
+    grid-row: 3/6;
+    max-width: 100%;
+    height: inherit;
+    box-shadow: 5px 5px 10px #6C0E23;
+
+  }
+  .banner p {
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    background-color:#0D1B2A;
+    line-height: 1.5em;
+    padding: 35px;
+    grid-column: 1/5;
+    grid-row: 3/7;
+    box-shadow: 5px 5px 10px #6C0E23;
+    margin-bottom: 2rem;
+  }
+  
+  
+  /* Style the content section */
+  .content {
+    display: grid;
+    background-color: #f2f2f2;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 3rem;
+    margin-bottom: 40px;
+    column-gap: 5px;
+  }
+  .content img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 5px 5px 10px #6C0E23;
+    align-items: right;
+    float: left;
+  }
+  
+  .content h2 {
+    text-decoration: "Rock Salt";
+    text-align: center;
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content p {
+    font-size: 1.2em;
+    color: #0D1B2A;
+    line-height: 1.5em;
+    padding: 35px;
+    margin-bottom: 2rem;
+    text-align: center;
+    float: right;
+  }
+  .growth {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .growth img {
+    float: right;
+    margin: 2em; /* adjust margin as needed */
+    width: 550px;
+    height: 750px;
+  }
+  
+  .growth h2 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+  
+  .growth p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  .contact button {
+    background-color: #6C0E23;
+    color: #0D1B2A;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #415A77;
+  }
+  
+  .contact a {
+    color: white;
+    text-decoration: none;
+  }
+    /* Style the contact button */
+ 
   @media screen and (max-width: 900px) {
-    #hero, header {
+    #hero, header, .banner {
         display: block;
         height: auto;
     }
-    header nav, footer {
+    header, footer {
         flex-direction: column;
-    }
-    header nav a {
-        display: block;
-        padding: 15px;
     }
     #hero {
         margin-top: 0;
@@ -258,7 +427,7 @@
     #background {
         display: none;
     }
-    #about img, #about p1 {
+    #about img, #about, .content, .growth p1 {
         width: 80%;
         display: block;
         margin: 0 auto;
@@ -271,4 +440,19 @@
     footer {
         margin-top: 25px;
     }
+    .topnav .login-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .login-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;
+    }
+  
 }
