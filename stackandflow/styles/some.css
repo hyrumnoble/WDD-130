@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Rock+Salt&display=swap');
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: "Arial", Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0D1B2A;
+
+  }
+  
+  header {
+    background-color: #0D1B2A	;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .logo {
+    display: block;
+    width: 150px;
+    height: 150px;
+    transition: transform .5s;
+  }
+  
+  header h1 {
+    text-decoration: "Rock Salt";
+    text-align: center;
+    font-size: 2rem;
+    display: inline-block;
+  }
+  
+  .topnav {
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  .topnav a {
+    display: inline-block;
+    text-decoration: "Rock Salts";
+    padding: 35px;
+    margin-left: 1rem;
+    color: #415A77;
+  }
+  .topnav a:hover {
+    text-decoration: underline;
+    color: #6C0E23;
+    background-color: #415A77;
+  }
+  .topnav a.active {
+    font-weight: bold;
+  }
+  
+  .login-container {
+    display: inline-block;
+    margin: 2rem;
+    align-items: end;
+  }
+  
+  .login-container input[type="text"], .login-container input[type="password"] {
+    padding: 6px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+  }
+  
+  .login-container button[type="submit"] {
+    padding: 6px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6C0E23;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .login-container button[type="submit"]:hover {
+    background-color: #6C0E23;
+  }
+
+  /* Footer styles */
+  footer {
+    background-color: #0D1B2A;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  footer p a:hover{
+    text-decoration: underline;
+    color: #6C0E23;
+    background-color: #415A77;
+
+  }
+  
+   /* page 3 */
+  
+   main {
+    padding: 20px;
+  }
+  
+  .colage {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 3rem;
+  }
+  .colage img{
+    grid-column: 6/10;
+    grid-row: 3/6;
+    max-width: 100%;
+    height: inherit;
+    box-shadow: 5px 5px 10px #6C0E23;
+
+  }
+  
+  .colage h1 {
+    text-decoration: "Rock Salt";
+    grid-row: 1/2;
+    grid-column: 4/6;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .colage p {
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    background-color:#0D1B2A;
+    line-height: 1.5em;
+    padding: 35px;
+    grid-column: 1/5;
+    grid-row: 3/7;
+    box-shadow: 5px 5px 10px #6C0E23;
+    margin-bottom: 2rem;
+  }
+  
+  /* Service section */
+.service {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.service h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.service p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.service ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.service img {
+  width: 350px;
+  height: 200px;
+  border: 2px #0D1B2A;
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+/* Process section */
+.process {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.process h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.process p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.process ol {
+  list-style-type: decimal;
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+
+.process li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.process button {
+  background-color: #6C0E23;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.process button:hover {
+  background-color: #3e8e41;
+}
+
+/* Testimonial section */
+.testimonial {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.testimonial h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.testimonial p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.testimonial blockquote {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.testimonial blockquote p {
+  font-style: italic;
+}
+
+.testimonial blockquote footer {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.testimonial img {
+  width: 200px;
+  height: 150px;
+  border: 2px solid #0D1B2A;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+  margin-bottom: 30px;
+}
+
+
+  /* Responsive styles */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .topnav {
+    display: none;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  .topnav a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    color: #0D1B2A;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  
+  .login-container input[type="text"], .login-container input[type="password"] {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .login-container button[type="submit"] {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .colage {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 1rem;
+  }
+  
+  .colage img{
+    grid-column: 1/-1;
+    grid-row: 3/6;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .colage h1 {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .colage p .process .testimonial p {
+    font-size: 1em;
+    padding: 1rem;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    box-shadow: none;
+    margin-bottom: 1rem;
+  }
+  
+  .service img {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin: 0;
+  }
+}
