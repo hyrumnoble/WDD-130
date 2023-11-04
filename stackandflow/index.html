@@ -22,9 +22,9 @@
         <a href="advertisment.html">Advertisement</a>
         <div class="login-container">
           <form id="loginForm">
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button type="submit" onclick="storeLogin()">Login</button>
+          <input type="text" id="username" placeholder="Username">
+          <input type="password" id="password" placeholder="Password">
+          <button type="submit" onclick="storeLogin()">Login</button>
           </form>
         </div>
       </div>
@@ -62,6 +62,7 @@
             <textarea id="message" required></textarea>
             <button type="submit" onclick="saveDocument()">Save Details</button>
           </form>
+
       </section>
     </main>
     <footer>
@@ -80,30 +81,32 @@
         <p><a href="site-plan.html">Site Plan</a></p>
     </footer>
     <script>
-      function storeLogin() {
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-      }
-              // Store in local storage
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
-      function saveDocument() {
-         const name = document.getElementById('name').value;
-         const email = document.getElementById('email').value;
-         const message = document.getElementById('message').value;
+    function storeLogin() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Store in local storage
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
+    }
+
+    function saveDocument() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
 
       // Create a string with the form details
-         const formDetails = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+      const formDetails = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
 
       // Create a new Blob object with the form details
-         const blob = new Blob([formDetails], { type: 'text/plain' });
+      const blob = new Blob([formDetails], { type: 'text/plain' });
 
       // Create a link to download the file
-         const link = document.createElement('a');
-         link.download = 'contact_details.txt';
-         link.href = window.URL.createObjectURL(blob);
-         link.click();
-      }
-    </script>
+      const link = document.createElement('a');
+      link.download = 'contact_details.txt';
+      link.href = window.URL.createObjectURL(blob);
+      link.click();
+    }
+  </script>
   </body>
 </html>
