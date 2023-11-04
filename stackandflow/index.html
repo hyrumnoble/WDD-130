@@ -18,13 +18,13 @@
       <h1>Stack and Flow Angency</h1>
       <div class="topnav">
         <a class="active" href="index.html">Home</a>
-        <a href="business.htm">Business Growth</a>
+        <a href="business.html">Business Growth</a>
         <a href="advertisment.html">Advertisement</a>
         <div class="login-container">
-          <form action="/action_page.php">
-            <input type="text" placeholder="Username" name="username">
-            <input type="text" placeholder="Password" name="psw">
-            <button type="submit">Login</button>
+          <form id="loginForm">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button type="submit" onclick="storeLogin()">Login</button>
           </form>
         </div>
       </div>
@@ -53,14 +53,15 @@
         <h3>Contact Us</h3>
         <p1>Get in touch with us to learn more about our services and how we can help your business.</p1>
         <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+          <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit" onclick="saveDocument()">Save Details</button>
+          </form>
       </section>
     </main>
     <footer>
@@ -78,5 +79,31 @@
     <p> Stack and Flow Angency&copy; 2023 - Hyrum Noble</p>
         <p><a href="site-plan.html">Site Plan</a></p>
     </footer>
+    <script>
+      function storeLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+      }
+              // Store in local storage
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+      function saveDocument() {
+         const name = document.getElementById('name').value;
+         const email = document.getElementById('email').value;
+         const message = document.getElementById('message').value;
+
+      // Create a string with the form details
+         const formDetails = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+      // Create a new Blob object with the form details
+         const blob = new Blob([formDetails], { type: 'text/plain' });
+
+      // Create a link to download the file
+         const link = document.createElement('a');
+         link.download = 'contact_details.txt';
+         link.href = window.URL.createObjectURL(blob);
+         link.click();
+      }
+    </script>
   </body>
 </html>
